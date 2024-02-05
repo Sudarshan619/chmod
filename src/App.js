@@ -1,23 +1,22 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { ChmodProvider} from './components/chmodContext';
+import ChmodCalculator from './components/chmod_calculator';
+import Textbox from './components/textbox';
+import Description from './components/description';
+import Navbar from './components/navbar';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ChmodProvider>
+      <Navbar></Navbar>
+      <div className='container4'>
+      <ChmodCalculator></ChmodCalculator>
+      <Textbox></Textbox>
+      </div>
+      <Description></Description>
+      </ChmodProvider>
     </div>
   );
 }
