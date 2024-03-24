@@ -5,7 +5,6 @@ export default function Navbar
 
     () {
     return (
-        
             <nav className="navbar bg-dark navbar-expand-lg bg-body-tertiary " data-bs-theme="dark">
                 <div className="container-fluid">
                     <a className="navbar-brand" href="#">ChmodCalculator</a>

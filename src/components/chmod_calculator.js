@@ -22,14 +22,27 @@ const ChmodCalculator = () => {
           checked ? [...prevPermissions, value] : prevPermissions.filter((p) => p !== value)
           
         );
-        if(value === '4'){
-            setUserLinux((prevLinux) => (checked ? [...prevLinux, userLinux.splice(0, 0, "r")] : prevLinux.filter((p) => p !== 'r')));
-        }
+        if (value === '4') {
+          setUserLinux(prevLinux => {
+              const updatedLinux = [...prevLinux];
+              updatedLinux[0] = checked ? 'r' : '-';
+              return updatedLinux;
+          });
+      }
+      
         if(value === '2'){
-            setUserLinux((prevLinux) => (checked ? [...prevLinux, userLinux.splice(1, 0, "w")] : prevLinux.filter((p) => p !== 'w')));
+          setUserLinux(prevLinux => {
+            const updatedLinux = [...prevLinux];
+            updatedLinux[1] = checked ? 'w' : '-';
+            return updatedLinux;
+        });
         }
         if(value === '1'){
-            setUserLinux((prevLinux) => (checked ? [...prevLinux, userLinux.splice(2, 0, "x")] : prevLinux.filter((p) => p !== 'x')));
+          setUserLinux(prevLinux => {
+            const updatedLinux = [...prevLinux];
+            updatedLinux[2] = checked ? 'x' : '-';
+            return updatedLinux;
+        });
         }
         
         break;
@@ -38,13 +51,25 @@ const ChmodCalculator = () => {
           checked ? [...prevPermissions, value] : prevPermissions.filter((p) => p !== value)
         );
         if(value === '4'){
-            setUserLinux((prevLinux) => (checked ? [...prevLinux, userLinux.splice(3, 0, "r")] : prevLinux.filter((p) => p !== 'r')));
+          setUserLinux(prevLinux => {
+            const updatedLinux = [...prevLinux];
+            updatedLinux[3] = checked ? 'r' : '-';
+            return updatedLinux;
+        });
         }
         if(value === '2'){
-            setUserLinux((prevLinux) => (checked ? [...prevLinux, userLinux.splice(4, 0, "w")] : prevLinux.filter((p) => p !== 'w')));
+          setUserLinux(prevLinux => {
+            const updatedLinux = [...prevLinux];
+            updatedLinux[4] = checked ? 'w' : '-';
+            return updatedLinux;
+        });
         }
         if(value === '1'){
-            setUserLinux((prevLinux) => (checked ? [...prevLinux, userLinux.splice(5, 0, "x")] : prevLinux.filter((p) => p !== 'x')));
+          setUserLinux(prevLinux => {
+            const updatedLinux = [...prevLinux];
+            updatedLinux[5] = checked ? 'x' : '-';
+            return updatedLinux;
+        });
         }
         break;
       case 'other':
@@ -52,13 +77,25 @@ const ChmodCalculator = () => {
           checked ? [...prevPermissions, value] : prevPermissions.filter((p) => p !== value)
         );
         if(value === '4'){
-            setUserLinux((prevLinux) => (checked ? [...prevLinux, userLinux.splice(6, 0, "r")] : prevLinux.filter((p) => p !== 'r')));
+          setUserLinux(prevLinux => {
+            const updatedLinux = [...prevLinux];
+            updatedLinux[6] = checked ? 'r' : '-';
+            return updatedLinux;
+        });
         }
         if(value === '2'){
-            setUserLinux((prevLinux) => (checked ? [...prevLinux, userLinux.splice(7, 0, "w")] : prevLinux.filter((p) => p !== 'w')));
+          setUserLinux(prevLinux => {
+            const updatedLinux = [...prevLinux];
+            updatedLinux[7] = checked ? 'w' : '-';
+            return updatedLinux;
+        });
         }
         if(value === '1'){
-            setUserLinux((prevLinux) => (checked ? [...prevLinux, userLinux.splice(8, 0, "x")] : prevLinux.filter((p) => p !== 'x')));
+          setUserLinux(prevLinux => {
+            const updatedLinux = [...prevLinux];
+            updatedLinux[8] = checked ? 'x' : '-';
+            return updatedLinux;
+        });
         }
         break;
         default:
